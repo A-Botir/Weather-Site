@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-style: normal;
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #fff;
+}
+
+body {
+  background-color: #d6cfcf;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  flex-shrink: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  background-color: none;
+  border: none;
+  cursor: pointer;
+}
+
+.d-flex-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-flex-ec {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.d-flex-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrap {
+  width: 100%;
+  background-image: url("../image/back_image.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.left_section{
+    padding: 37px 0 85px 0;
+}
+.temp {
+  margin-top: 350px;
+  gap: 10px;
+}
+
+.temp_img__box{
+  display: flex;
+  align-items: end;
+  justify-content: right;
+  width: 100px;
+  height: 100px;
+}
+
+.main_temp {
+  font-size: 143px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -11.44px;
+}
+
+.main_city {
+  font-size: 60px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.date {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.info {
+  padding: 37px 0 0 35px;
+  border-left: 5px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(9.5px);
+}
+.info_search__group {
+  padding: 13px 10px 11px 0;
+  width: 371px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #fff;
+  gap: 15px;
+}
+
+.info_search {
+  background: none;
+  outline: none;
+  border: none;
+  flex-grow: 1;
+}
+
+.info_search::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.info_search::after{
+  background: none;
+}
+
+.info_upper__text {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 52px;
+}
+
+.info_title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.info_item {
+  flex-grow: 1;
+}
+
+.info_item__text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+}
+.info_item__box {
+  gap: 20px;
+}
