@@ -1,15 +1,39 @@
-// fetch("https://jsonplaceholder.typicode.com/comments")
-// .then((resp) => {
-//     return resp.json();
-// }).then((data) => {
-//     data.filter((item) => {
-//         if(item.id%2 == 0){
-//             const listItem = document.createElement("li");
-//             listItem.textContent = item.email;
-//             dataList.appendChild(listItem);
-//         }
-//     });
-// })
+const inputValue = document.getElementById("search");
+const cityName = document.getElementById("maincity");
+const mainTemp = document.getElementById("maintemp");
+const maxTempElement = document.getElementById("maxtemp");
+const minTempElement = document.getElementById("mintemp");
+const humidityElement = document.getElementById("humadity");
+const cloudsElement = document.getElementById("cloud");
+const windElement = document.getElementById("wind");
+
+const BASE_URL = {
+  api: "https://api.openweathermap.org/data/2.5/weather",
+  api_key: "396ecce459190fea28f72dacc8b1ed9c",
+  units: "metric",
+};
+
+const searchInfo = (e) => {
+  const inputVal = e.target.value.trim();
+  fetch(
+    `${BASE_URL.api}?q=${inputVal}&appid=${BASE_URL.api_key}&units=${BASE_URL.units}`
+  )
+    .then((resp) => resp.json())
+    .then((data) => {
+      cityName.textContent = data.name;
+      mainTemp.textContent = data.main.temp;
+      maxTempElement.textContent = data.main.temp_max;
+      minTempElement.textContent = data.main.temp_min;
+      humidityElement.textContent = data.main.humidity;
+      cloudsElement.textContent = data.clouds.all;
+      windElement.textContent = data.wind.speed;
+    })
+    .catch((error) => {
+      console.error("Fetch error:", error);
+    });
+};
+
+inputValue.addEventListener("input", searchInfo);
 
 function updateClock() {
   const clockElement = document.getElementById("clock");
@@ -30,10 +54,3 @@ function updateClock() {
 }
 setInterval(updateClock, 1000);
 updateClock();
-
-const inputValue = document.getElementById('search');
-
-const weatherInfo = e => {
-    const inputDate = e.target.value;
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=tashkent&appid=17763616bc668bf01ae1ce3f00fe6020&units=metric')
-}

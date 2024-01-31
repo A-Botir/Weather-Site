@@ -111,6 +111,7 @@ button {
   border-left: 5px solid rgba(255, 255, 255, 0.14);
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(9.5px);
+  height: 100vh;
 }
 .info_search__group {
   padding: 13px 10px 11px 0;
