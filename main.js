@@ -21,12 +21,12 @@ const searchInfo = (e) => {
     .then((resp) => resp.json())
     .then((data) => {
       cityName.textContent = data.name;
-      mainTemp.textContent = data.main.temp;
-      maxTempElement.textContent = data.main.temp_max;
-      minTempElement.textContent = data.main.temp_min;
-      humidityElement.textContent = data.main.humidity;
-      cloudsElement.textContent = data.clouds.all;
-      windElement.textContent = data.wind.speed;
+      mainTemp.textContent = `${parseInt(data.main.temp)}°`;
+      maxTempElement.textContent = `${parseInt(data.main.temp_max)}°`;
+      minTempElement.textContent = `${parseInt(data.main.temp_min)}°`;
+      humidityElement.textContent = `${data.main.humidity}%`;
+      cloudsElement.textContent = `${data.clouds.all}%`;
+      windElement.textContent = `${Math.round(data.wind.speed)}km/h`;
     })
     .catch((error) => {
       console.error("Fetch error:", error);
